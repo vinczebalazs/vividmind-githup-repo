@@ -47,7 +47,7 @@ final class MainPresenterTests: QuickSpec {
             let first = presenter.repositories[0]
             expect(first.name) == "SCLAlertView-Swift"
             expect(first.ownerName) == "vikmeup"
-            expect(first.ownerAvatar) == URL(string: "https://avatars.githubusercontent.com/u/1641795?v=4")
+            expect(first.ownerAvatarURL) == URL(string: "https://avatars.githubusercontent.com/u/1641795?v=4")
             expect(first.description) == "Beautiful animated Alert View. Written in Swift"
             expect(first.htmlURL) == URL(string: "https://github.com/vikmeup/SCLAlertView-Swift")
             expect(first.numberOfStars) == 5158

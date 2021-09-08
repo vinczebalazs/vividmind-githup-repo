@@ -39,4 +39,9 @@ final class MainPresenter {
             }
     }
     
+    func clearSearch() {
+        repositories = []
+        nextPageURL = nil
+    }
+    
 }

@@ -16,7 +16,7 @@ struct Repository: JSONDecodable, Equatable {
     let htmlURL: URL
     let name: String
     let numberOfStars: Int
-    let ownerAvatar: URL
+    let ownerAvatarURL: URL
     let ownerName: String
     
     // MARK: Initializers
@@ -47,7 +47,7 @@ struct Repository: JSONDecodable, Equatable {
         self.description = json["description"].string
         self.name = name
         self.numberOfStars = numberOfStars
-        self.ownerAvatar = ownerAvatar
+        self.ownerAvatarURL = ownerAvatar
         self.ownerName = ownerName
         self.htmlURL = htmlURL
     }
