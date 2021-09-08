@@ -9,7 +9,6 @@
 import Quick
 import Nimble
 import OHHTTPStubs
-import PromiseKit
 
 // swiftlint:disable function_body_length
 final class MainPresenterTests: QuickSpec {
@@ -32,12 +31,14 @@ final class MainPresenterTests: QuickSpec {
             
             // Perform the search request.
             let exp1 = QuickSpec.current.expectation(description: "Search request finished.")
-            presenter.searchRepositories(query: "query").ensure {
+            presenter.onSearchFinished = {
                 exp1.fulfill()
-            }.catch {
-                print($0)
-                fatalError()
+                if case let .failure(error) = $0 {
+                    print(error)
+                    fatalError()
+                }
             }
+            presenter.searchRepositories(query: "query")
             QuickSpec.current.waitForExpectations(timeout: 2)
             
             // Check the number of items.
@@ -65,12 +66,14 @@ final class MainPresenterTests: QuickSpec {
             
             // Perform the search request.
             let exp1 = QuickSpec.current.expectation(description: "Search request finished.")
-            presenter.searchRepositories(query: "query").ensure {
+            presenter.onSearchFinished = {
                 exp1.fulfill()
-            }.catch {
-                print($0)
-                fatalError()
+                if case let .failure(error) = $0 {
+                    print(error)
+                    fatalError()
+                }
             }
+            presenter.searchRepositories(query: "query")
             QuickSpec.current.waitForExpectations(timeout: 2)
             
             let nextPageURL = "https://api.github.com/search/repositories?q=query&page=2"
@@ -89,12 +92,14 @@ final class MainPresenterTests: QuickSpec {
             
             // Perform the next page request.
             let exp2 = QuickSpec.current.expectation(description: "Next page request finished.")
-            presenter.loadNextPage().ensure {
+            presenter.onLoadNextPageFinished = {
                 exp2.fulfill()
-            }.catch {
-                print($0)
-                fatalError()
+                if case let .failure(error) = $0 {
+                    print(error)
+                    fatalError()
+                }
             }
+            presenter.loadNextPage()
             QuickSpec.current.waitForExpectations(timeout: 2)
             
             // Check if the results are appended correctly.

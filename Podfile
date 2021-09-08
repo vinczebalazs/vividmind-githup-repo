@@ -15,6 +15,7 @@ target 'GitHub Search' do
     pod 'OHHTTPStubs/Swift'
     pod 'Quick'
     pod 'Nimble'
+    pod 'SnapshotTesting', '~> 1.9.0'
   end
 
   target 'GitHub SearchUITests' do

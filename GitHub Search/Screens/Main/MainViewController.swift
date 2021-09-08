@@ -9,22 +9,19 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    // MARK: IBOutlets
-    
-    @IBOutlet private weak var tableView: UITableView! {
-        didSet {
-            tableView.dataSource = self
-            tableView.delegate = self
-            tableView.register(UINib(MainTableViewCell.self), forCellReuseIdentifier: cellID)
-            tableView.tableFooterView = UIView()
-            tableView.showsVerticalScrollIndicator = false
-        }
-    }
-    
     // MARK: Private Properties
     
-    private let presenter = MainPresenter()
+    private let presenter: MainPresenter
     private let cellID = "RepositoryCell"
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(MainTableViewCell.self), forCellReuseIdentifier: cellID)
+        tableView.tableFooterView = UIView()
+        tableView.showsVerticalScrollIndicator = false
+        return tableView
+    }()
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
@@ -36,15 +33,33 @@ final class MainViewController: UIViewController {
         return searchController
     }()
     private var isLoadingNextPage = false
+    private let activityIndicator = UIActivityIndicatorView(style: .large)
+    
+    // MARK: Initializers
+    
+    init(presenter: MainPresenter = MainPresenter()) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: Public Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        attachPresenter()
+        
         title = "GitHub Search"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        view.addSubview(tableView)
+        view.backgroundColor = .systemBackground
+        tableView.constrainToEdges(of: view)
     }
     
     // MARK: Private Methods
@@ -52,17 +67,11 @@ final class MainViewController: UIViewController {
     private func performSearch(query: String) {
         tableView.isHidden = true
 
-        let activityIndicator = UIActivityIndicatorView(style: .large)
         view.addSubview(activityIndicator)
         activityIndicator.constrainToCenter(of: view)
         activityIndicator.startAnimating()
         
-        presenter.searchRepositories(query: query).ensure {
-            activityIndicator.removeFromSuperview()
-            self.tableView.isHidden = false
-        }._done {
-            self.tableView.reloadData()
-        }
+        presenter.searchRepositories(query: query)
     }
     
     private func loadNextPage() {
@@ -74,12 +83,24 @@ final class MainViewController: UIViewController {
         tableView.tableFooterView = activityIndicator
         
         isLoadingNextPage = true
+        presenter.loadNextPage()
+    }
+    
+    private func attachPresenter() {
+        presenter.onSearchFinished = { [self] result in
+            activityIndicator.removeFromSuperview()
+            if case .success() = result {
+                tableView.isHidden = false
+                tableView.reloadData()
+            }
+        }
         
-        presenter.loadNextPage().ensure {
-            self.isLoadingNextPage = false
-            self.tableView.tableFooterView = nil
-        }._done {
-            self.tableView.reloadData()
+        presenter.onLoadNextPageFinished = { [self] result in
+            isLoadingNextPage = false
+            tableView.tableFooterView = nil
+            if case .success() = result {
+                tableView.reloadData()
+            }
         }
     }
     

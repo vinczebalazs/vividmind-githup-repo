@@ -19,24 +19,31 @@ final class MainPresenter {
             
     // MARK: Public Methods
     
-    func searchRepositories(query: String) -> Promise<Void> {
-        APIClient.shared.execute(SearchRepositoriesRequest(query: query)).then { [self] result -> Promise<Void> in
-            repositories = result.items
-            nextPageURL = result.nextPageURL
-            return Promise { $0.fulfill_() }
+    var onSearchFinished: ((Swift.Result<Void, Error>) -> ())?
+    var onLoadNextPageFinished: ((Swift.Result<Void, Error>) -> ())?
+
+    func searchRepositories(query: String) {
+        APIClient.shared.execute(SearchRepositoriesRequest(query: query)).done { [self] in
+            repositories = $0.items
+            nextPageURL = $0.nextPageURL
+            onSearchFinished?(.success(()))
+        }.catch {
+            self.onSearchFinished?(.failure($0))
         }
     }
     
-    func loadNextPage() -> Promise<Void> {
+    func loadNextPage() {
         guard let nextPageURL = nextPageURL else {
             fatalError("No next page. Use hasNextPage to check prior to calling this method.")
         }
-        return APIClient.shared.execute(SearchRepositoriesNextPageRequest(url: nextPageURL))
-            .then { result -> Promise<Void> in
-                self.repositories += result.items
-                self.nextPageURL = result.nextPageURL
-                return Promise { $0.fulfill_() }
-            }
+        
+        APIClient.shared.execute(SearchRepositoriesNextPageRequest(url: nextPageURL)).done {
+            self.repositories += $0.items
+            self.nextPageURL = $0.nextPageURL
+            self.onLoadNextPageFinished?(.success(()))
+        }.catch {
+            self.onLoadNextPageFinished?(.failure($0))
+        }
     }
     
     func clearSearch() {

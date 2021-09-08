@@ -1,0 +1,127 @@
+<UIView; frame = (0 0; 375 812); autoresize = W+H; layer = <CALayer>>
+   | <UITableView; frame = (0 0; 375 812); clipsToBounds = YES; gestureRecognizers = <NSArray>; layer = <CALayer>; contentOffset: {0, -44}; contentSize: {375, 4045.6666666666665}; adjustedContentInset: {44, 0, 34, 0}; dataSource: <GitHub_Search.MainViewController>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 689.667; 375 3356); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 3356); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 3356); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 3356); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 40.6667); text = 'No-8-PinterestSwift-1007-...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 56.6667; 285 3291.33); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 69.6667 15); text = 'jinchengliu'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (77.6667 0; 25 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 8 15); text = '3'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 3276.33); text = ' 88.gif  No 9  YouTube Tr...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 3355.67; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 540.333; 375 149.333); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 149.333); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 149.333); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 149.333); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 20.3333); text = 'FlutterToastAlertPlugin'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 36.3333; 285 105); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 36 15); text = 'roh-it'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (44 0; 23 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 6 15); text = '1'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 90); text = 'A flutter plugin that sho...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 149; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 424.333; 375 116); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 116); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 116); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 116); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 40.6667); text = 'No-11-SCLAlertView-Swift-...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 56.6667; 285 51.3333); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 69.6667 15); text = 'jinchengliu'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (77.6667 0; 25 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 8 15); text = '0'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 36.3333); text = 'Beautiful animated Alert ...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 115.667; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 346.667; 375 77.6667); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 77.6667); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 77.6667); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 77.6667); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 20.3333); text = 'SCLAlertView-Swift-master'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 36.3333; 285 33.3333); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 74 15); text = 'kenchiu100'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (82 0; 25 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 8 15); text = '0'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 18.3333); text = 'implement this in tesdrop'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 77.3333; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 287; 375 59.6667); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 59.6667); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 59.6667); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 59.6667); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 20.3333); text = 'SCLAlertView-swift23'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 36.3333; 285 15.3333); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 50 15); text = 'malbert'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (58 0; 25 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 8 15); text = '0'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 0.333333); opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 59.3333; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 191.333; 375 95.6667); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 95.6667); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 95.6667); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 95.6667); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 20.3333); text = 'Oops'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 36.3333; 285 51.3333); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 46.6667 15); text = 'Meniny'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (54.6667 0; 25 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 8 15); text = '9'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 36.3333); text = '⚠️A SCLAlertView Like Dia...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <_UILabelContentLayer> (layer)
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 95.3333; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 95.6667; 375 95.6667); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 95.6667); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 95.6667); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 95.6667); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 20.3333); text = 'react-native-scl-alert'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 36.3333; 285 51.3333); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 74 15); text = 'rafaelmotta'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (82 0; 36.6667 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 19.6667 15); text = '211'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 36.3333); text = '📢 A react native impleme...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <_UILabelContentLayer> (layer)
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 95.3333; 359 0.333333); layer = <CALayer>>
+   |    | <GitHub_Search.MainTableViewCell; baseClass = UITableViewCell; frame = (0 0; 375 95.6667); autoresize = W; layer = <CALayer>>
+   |    |    | <_UISystemBackgroundView; frame = (0 0; 375 95.6667); layer = <CALayer>; configuration = <UIBackgroundConfiguration; Base Style = List Plain Cell; backgroundColor = <UIDynamicSystemColor; name = tableCellPlainBackgroundColor>>>
+   |    |    |    | <UIView; frame = (0 0; 375 95.6667); clipsToBounds = YES; layer = <CALayer>>
+   |    |    | <UITableViewCellContentView; frame = (0 0; 375 95.6667); clipsToBounds = YES; opaque = NO; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UIImageView; frame = (16 8; 50 50); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    | <UILabel; frame = (74 8; 285 20.3333); text = 'SCLAlertView-Swift'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    | <UIStackView; frame = (74 36.3333; 285 51.3333); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 285 15); autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (0 0; 54.6667 15); text = 'vikmeup'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    |    |    |    | <UIStackView; frame = (62.6667 0; 46.6667 15); opaque = NO; autoresize = RM+BM; layer = <CALayer>>
+   |    |    |    |    |    |    | <UIImageView; frame = (0 -0.333333; 15 14.6667); clipsToBounds = YES; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = secondaryLabelColor>; layer = <CALayer>>
+   |    |    |    |    |    |    | <UILabel; frame = (17 0; 29.6667 15); text = '5158'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UILabel; frame = (0 15; 285 36.3333); text = 'Beautiful animated Alert ...'; opaque = NO; autoresize = RM+BM; userInteractionEnabled = NO; tintColor = <UIDynamicSystemColor; name = tertiaryLabelColor>; layer = <_UILabelLayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (15 102; 305 1); layer = <CALayer>>
+   |    |    | <_UITableViewCellSeparatorView; frame = (16 95.3333; 359 0.333333); layer = <CALayer>>
+   |    | <UIView; frame = (0 4045.67; 375 0); layer = <CALayer>>
+   |    | <_UIScrollViewScrollIndicator; frame = (3 728; 369 3); alpha = 0; autoresize = TM; layer = <CALayer>>
+   |    |    | <UIView; frame = (0 0; 369 3); layer = <CALayer>>
