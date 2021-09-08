@@ -11,7 +11,7 @@ final class JSONResponseParser<T: JSONDecodable>: ResponseParser<T> {
     
     // MARK: Static Public Methods
     
-    override class func parse(_ data: Data) throws -> T {
+    override class func parse(_ data: Data, response: HTTPURLResponse) throws -> T {
         try T(try JSON(data: data))
     }
     

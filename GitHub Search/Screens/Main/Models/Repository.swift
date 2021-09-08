@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-struct Repository: JSONDecodable {
+struct Repository: JSONDecodable, Equatable {
     
     // MARK: Public Properties
     

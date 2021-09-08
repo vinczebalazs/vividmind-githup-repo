@@ -36,7 +36,7 @@ final class APIClient {
             firstly {
                 urlSession.dataTask(.promise, with: buildURLRequest(from: request))
             }.done {
-                seal.fulfill(try request.responseParser.parse($0.data))
+                seal.fulfill(try request.responseParser.parse($0.data, response: $0.response as! HTTPURLResponse))
             }.catch(policy: .allErrors) {
                 do {
                     try APIErrorHandler.handle($0, request: request)
@@ -53,10 +53,23 @@ final class APIClient {
     // MARK: Private Methods
     
     private func urlFor<T: APIRequest>(request: T) -> URL {
+        // If the request's URI is already a valid URL, use that instead of building one.
+        if request.uri.isValidURL,
+           let url = URL(string: request.uri),
+           var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+            urlComponents.queryItems = request.queryItems?.compactMap {
+                if $0.value != nil && !$0.value!.isEmpty {
+                    return URLQueryItem(name: $0.key, value: $0.value)
+                }
+                return nil
+            }
+            return urlComponents.url!
+        }
+        
         var urlComponents = URLComponents()
         urlComponents.host = host
         urlComponents.scheme = "https"
-        urlComponents.path = request.endpoint
+        urlComponents.path = request.uri
         urlComponents.queryItems = request.queryItems?.compactMap {
             if $0.value != nil && !$0.value!.isEmpty {
                 return URLQueryItem(name: $0.key, value: $0.value)
@@ -71,6 +84,19 @@ final class APIClient {
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.httpBody = request.body
         return urlRequest
+    }
+    
+}
+
+// MARK: String
+
+fileprivate extension String {
+    
+    var isValidURL: Bool {
+        guard let url = URL(string: self) else { return false }
+        
+        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        return urlComponents?.scheme != nil && urlComponents?.host != nil
     }
     
 }

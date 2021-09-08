@@ -15,7 +15,7 @@ protocol APIRequest {
     
     // MARK: Properties
     
-    var endpoint: String { get }
+    var uri: String { get }
     var method: HTTPMethod { get }
     var queryItems: [String: String?]? { get }
     var body: Data? { get }

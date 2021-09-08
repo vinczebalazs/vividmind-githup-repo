@@ -11,7 +11,7 @@ class ResponseParser<T> {
     
     // MARK: Static Public Methods
 
-    class func parse(_ data: Data) throws -> T {
+    class func parse(_ data: Data, response: HTTPURLResponse) throws -> T {
         fatalError("Not implemented.")
     }
     

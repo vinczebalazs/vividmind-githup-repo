@@ -32,6 +32,9 @@
 		B67C7F3D26E8F6E000FAB498 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F3C26E8F6E000FAB498 /* ResponseParser.swift */; };
 		B67C7F4326E8F7CC00FAB498 /* SearchRepositoriesResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F4226E8F7CC00FAB498 /* SearchRepositoriesResponseParser.swift */; };
 		B67C7F4526E8FB6800FAB498 /* JSONResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F4426E8FB6800FAB498 /* JSONResponseParser.swift */; };
+		B67C7F4926E8FF7E00FAB498 /* SearchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F4826E8FF7E00FAB498 /* SearchRepositoriesResponse.swift */; };
+		B67C7F4B26E90C2900FAB498 /* SearchRepositoriesNextPageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F4A26E90C2900FAB498 /* SearchRepositoriesNextPageRequest.swift */; };
+		B67C7F4E26E90ED400FAB498 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F4D26E90ED400FAB498 /* MainPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		B67C7F3C26E8F6E000FAB498 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		B67C7F4226E8F7CC00FAB498 /* SearchRepositoriesResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesResponseParser.swift; sourceTree = "<group>"; };
 		B67C7F4426E8FB6800FAB498 /* JSONResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseParser.swift; sourceTree = "<group>"; };
+		B67C7F4826E8FF7E00FAB498 /* SearchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesResponse.swift; sourceTree = "<group>"; };
+		B67C7F4A26E90C2900FAB498 /* SearchRepositoriesNextPageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesNextPageRequest.swift; sourceTree = "<group>"; };
+		B67C7F4D26E90ED400FAB498 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		BB7473C19719CC8585AAFEE4 /* Pods-GitHub Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Search.debug.xcconfig"; path = "Target Support Files/Pods-GitHub Search/Pods-GitHub Search.debug.xcconfig"; sourceTree = "<group>"; };
 		C8011ACBA920F17E3B33DA49 /* Pods-GitHub Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Search.release.xcconfig"; path = "Target Support Files/Pods-GitHub Search/Pods-GitHub Search.release.xcconfig"; sourceTree = "<group>"; };
 		DDF659558C2631871E007AE6 /* Pods-GitHub Search-GitHub SearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Search-GitHub SearchUITests.release.xcconfig"; path = "Target Support Files/Pods-GitHub Search-GitHub SearchUITests/Pods-GitHub Search-GitHub SearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 		B650C36A26DD20D400795627 /* GitHub SearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				B67C7F4C26E90E2300FAB498 /* Screens */,
 				B650C39D26DD284000795627 /* Resources */,
 				B650C36D26DD20D400795627 /* Info.plist */,
 				B67C7F4626E8FD2600FAB498 /* Core */,
@@ -237,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				B650C39326DD21C100795627 /* Repository.swift */,
+				B67C7F4826E8FF7E00FAB498 /* SearchRepositoriesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				B67C7F3126E8DC8D00FAB498 /* SearchRepositoriesRequest.swift */,
+				B67C7F4A26E90C2900FAB498 /* SearchRepositoriesNextPageRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -318,6 +327,14 @@
 				B650C39B26DD280C00795627 /* APIClientTests.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B67C7F4C26E90E2300FAB498 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B67C7F4D26E90ED400FAB498 /* MainPresenterTests.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		EC9DB5E74F5E8E269CBA904E /* Frameworks */ = {
@@ -594,6 +611,7 @@
 			files = (
 				B650C39426DD21C100795627 /* Repository.swift in Sources */,
 				B67C7F3626E8DDD600FAB498 /* MainViewController.swift in Sources */,
+				B67C7F4926E8FF7E00FAB498 /* SearchRepositoriesResponse.swift in Sources */,
 				B650C3A326DD28EB00795627 /* APIErrorHandler.swift in Sources */,
 				B650C35526DD20D300795627 /* AppDelegate.swift in Sources */,
 				B650C3AA26DD2FD200795627 /* JSONDecodable.swift in Sources */,
@@ -602,6 +620,7 @@
 				B650C38826DD214C00795627 /* APIRequest.swift in Sources */,
 				B67C7F4326E8F7CC00FAB498 /* SearchRepositoriesResponseParser.swift in Sources */,
 				B67C7F4526E8FB6800FAB498 /* JSONResponseParser.swift in Sources */,
+				B67C7F4B26E90C2900FAB498 /* SearchRepositoriesNextPageRequest.swift in Sources */,
 				B67C7F3526E8DDD600FAB498 /* MainPresenter.swift in Sources */,
 				B650C3AF26DD357900795627 /* Thenable+Extensions.swift in Sources */,
 				B650C35726DD20D300795627 /* SceneDelegate.swift in Sources */,
@@ -616,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B650C39C26DD280C00795627 /* APIClientTests.swift in Sources */,
+				B67C7F4E26E90ED400FAB498 /* MainPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
