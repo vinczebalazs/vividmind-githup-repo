@@ -1,21 +1,21 @@
 //
-//  SearchViewController.swift
+//  MainViewController.swift
 //  GitHub Search
 //
-//  Created by Balazs Vincze on 2021. 08. 30..
+//  Created by Balazs Vincze on 2021. 09. 08..
 //
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     // MARK: Private Properties
     
-    private let presenter: SearchPresenterType
+    private let presenter: MainPresenter
     
     // MARK: Initializers
     
-    init(presenter: SearchPresenterType) {
+    init(presenter: MainPresenter) {
         self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
