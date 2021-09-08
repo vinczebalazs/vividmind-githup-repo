@@ -41,6 +41,8 @@
 		B67C7F6026E954D700FAB498 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F5F26E954D700FAB498 /* MainViewControllerTests.swift */; };
 		B67C7F6226E957E600FAB498 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F6126E957E600FAB498 /* UIStoryboard+Extensions.swift */; };
 		B67C7F6426E9584900FAB498 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F6326E9584900FAB498 /* LaunchController.swift */; };
+		B67C7F6926E9622A00FAB498 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F6826E9622A00FAB498 /* UIApplication+Extensions.swift */; };
+		B67C7F6B26E9623500FAB498 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C7F6A26E9623500FAB498 /* UIAlertController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		B67C7F5F26E954D700FAB498 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		B67C7F6126E957E600FAB498 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		B67C7F6326E9584900FAB498 /* LaunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		B67C7F6826E9622A00FAB498 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		B67C7F6A26E9623500FAB498 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		BB7473C19719CC8585AAFEE4 /* Pods-GitHub Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Search.debug.xcconfig"; path = "Target Support Files/Pods-GitHub Search/Pods-GitHub Search.debug.xcconfig"; sourceTree = "<group>"; };
 		C8011ACBA920F17E3B33DA49 /* Pods-GitHub Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Search.release.xcconfig"; path = "Target Support Files/Pods-GitHub Search/Pods-GitHub Search.release.xcconfig"; sourceTree = "<group>"; };
 		DDF659558C2631871E007AE6 /* Pods-GitHub Search-GitHub SearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub Search-GitHub SearchUITests.release.xcconfig"; path = "Target Support Files/Pods-GitHub Search-GitHub SearchUITests/Pods-GitHub Search-GitHub SearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +179,8 @@
 		B650C35326DD20D300795627 /* GitHub Search */ = {
 			isa = PBXGroup;
 			children = (
-				B650C38526DD212A00795627 /* Application */,
 				B650C3A026DD28A900795627 /* Core */,
+				B650C38526DD212A00795627 /* Application */,
 				B650C38426DD210700795627 /* Resources */,
 				B650C38A26DD217B00795627 /* Screens */,
 			);
@@ -301,9 +305,11 @@
 			isa = PBXGroup;
 			children = (
 				B650C3AE26DD357900795627 /* Thenable+Extensions.swift */,
+				B67C7F6A26E9623500FAB498 /* UIAlertController+Extensions.swift */,
+				B67C7F6826E9622A00FAB498 /* UIApplication+Extensions.swift */,
 				B67C7F5A26E9427B00FAB498 /* UINib+Extensions.swift */,
-				B67C7F5C26E94F1C00FAB498 /* UIView+Extensions.swift */,
 				B67C7F6126E957E600FAB498 /* UIStoryboard+Extensions.swift */,
+				B67C7F5C26E94F1C00FAB498 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -668,6 +674,7 @@
 				B650C35526DD20D300795627 /* AppDelegate.swift in Sources */,
 				B650C3AA26DD2FD200795627 /* JSONDecodable.swift in Sources */,
 				B67C7F5B26E9427B00FAB498 /* UINib+Extensions.swift in Sources */,
+				B67C7F6926E9622A00FAB498 /* UIApplication+Extensions.swift in Sources */,
 				B650C3AD26DD306600795627 /* ResponseParsingError.swift in Sources */,
 				B67C7F3226E8DC8D00FAB498 /* SearchRepositoriesRequest.swift in Sources */,
 				B650C38826DD214C00795627 /* APIRequest.swift in Sources */,
@@ -677,6 +684,7 @@
 				B67C7F3526E8DDD600FAB498 /* MainPresenter.swift in Sources */,
 				B650C3AF26DD357900795627 /* Thenable+Extensions.swift in Sources */,
 				B650C35726DD20D300795627 /* SceneDelegate.swift in Sources */,
+				B67C7F6B26E9623500FAB498 /* UIAlertController+Extensions.swift in Sources */,
 				B650C3A726DD2B9C00795627 /* HTTPMethod.swift in Sources */,
 				B650C3A526DD294A00795627 /* APIClient.swift in Sources */,
 				B67C7F5026E93BB200FAB498 /* WebViewViewController.swift in Sources */,

@@ -14,15 +14,16 @@ final class APIErrorHandler {
     
     static func handle<T: APIRequest>(_ error: Error, request: T) throws {
         if isNoConnectionError(error) {
-            #warning("Should display a message to the user.")
             print("No connection!")
-            return
+            showAlert("No connection")
+            throw error
         }
-        
-        if case let PMKHTTPError.badStatusCode(code, _, _) = error {
+                
+        if case let APIClient.Error.httpError(url: _, errorCode: code, body: _) = error {
             switch code {
             case 403:
-                #warning("Rate limit.")
+                print("Rate limit reached.")
+                showAlert("Rate limit reached", "You have reached the rate limit imposed by the GitHub API.")
             default:
                 break
             }
@@ -61,6 +62,12 @@ final class APIErrorHandler {
             return true
         }
         return false
+    }
+    
+    static private func showAlert(_ title: String, _ message: String? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+        alertController.show()
     }
     
 }

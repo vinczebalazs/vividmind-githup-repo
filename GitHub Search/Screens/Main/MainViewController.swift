@@ -61,7 +61,7 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .systemBackground
         tableView.constrainToEdges(of: view)
     }
-    
+        
     // MARK: Private Methods
     
     private func performSearch(query: String) {

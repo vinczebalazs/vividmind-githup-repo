@@ -10,6 +10,14 @@ import PromiseKit
 import SwiftyJSON
 
 final class APIClient {
+    
+    // MARK: Nested Types
+    
+    enum Error: Swift.Error {
+        
+        case httpError(url: URL, errorCode: Int, body: Data)
+        
+    }
 
     // MARK: Public Properties
     
@@ -34,7 +42,7 @@ final class APIClient {
     func execute<Request: APIRequest>(_ request: Request) -> Promise<Request.Result> {
         Promise { seal in
             firstly {
-                urlSession.dataTask(.promise, with: buildURLRequest(from: request))
+                urlSession.dataTask(.promise, with: buildURLRequest(from: request)).validateResponse()
             }.done {
                 seal.fulfill(try request.responseParser.parse($0.data, response: $0.response as! HTTPURLResponse))
             }.catch(policy: .allErrors) {
@@ -97,6 +105,24 @@ fileprivate extension String {
         
         let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
         return urlComponents?.scheme != nil && urlComponents?.host != nil
+    }
+    
+}
+
+// MARK: Promise
+
+private extension Promise where T == (data: Data, response: URLResponse) {
+    
+    // MARK: Public Methods
+
+    func validateResponse() -> Promise<T> {
+        map {
+            let response = $0.response as! HTTPURLResponse
+            if response.statusCode > 300 {
+                throw APIClient.Error.httpError(url: response.url!, errorCode: response.statusCode, body: $0.data)
+            }
+            return $0
+        }
     }
     
 }
