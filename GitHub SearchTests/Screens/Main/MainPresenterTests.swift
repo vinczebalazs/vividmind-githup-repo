@@ -42,7 +42,7 @@ final class MainPresenterTests: QuickSpec {
             QuickSpec.current.waitForExpectations(timeout: 2)
             
             // Check the number of items.
-            expect(presenter.repositories.count) == 8
+            expect(presenter.repositories.count) == 14
             
             // Check if the first item is what we expect it to be.
             let first = presenter.repositories[0]

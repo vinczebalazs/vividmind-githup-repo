@@ -23,6 +23,7 @@ PODS:
   - PromiseKit/UIKit (6.15.3):
     - PromiseKit/CorePromise
   - Quick (4.0.0)
+  - Resolver (1.4.4)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - OHHTTPStubs/Swift
   - PromiseKit (~> 6.8)
   - Quick
+  - Resolver
   - SDWebImage (~> 5.0)
   - SnapshotTesting (~> 1.9.0)
   - SwiftyJSON (~> 4.0)
@@ -44,6 +46,7 @@ SPEC REPOS:
     - OHHTTPStubs
     - PromiseKit
     - Quick
+    - Resolver
     - SDWebImage
     - SnapshotTesting
     - SwiftyJSON
@@ -53,10 +56,11 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   PromiseKit: 3b2b6995e51a954c46dbc550ce3da44fbfb563c5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  Resolver: ec76daf652ac898b1e8a449cd9df3b45b5ce8196
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 11f696d2b7a839ea283245369d0f9a99bce3aeda
+PODFILE CHECKSUM: b63d2bafca6fe5bdc92d5426814991d3ce35b0a6
 
 COCOAPODS: 1.10.1

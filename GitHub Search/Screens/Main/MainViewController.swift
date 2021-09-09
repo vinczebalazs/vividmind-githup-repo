@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Resolver
 
 final class MainViewController: UIViewController {
     
     // MARK: Private Properties
     
-    private let presenter: MainPresenter
+    private var presenter: MainPresenterType
     private let cellID = "RepositoryCell"
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -37,8 +38,8 @@ final class MainViewController: UIViewController {
     
     // MARK: Initializers
     
-    init(presenter: MainPresenter = MainPresenter()) {
-        self.presenter = presenter
+    init(presenter: MainPresenterType? = nil) {
+        self.presenter = presenter ?? Resolver.resolve()
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -68,6 +69,7 @@ final class MainViewController: UIViewController {
         tableView.isHidden = true
 
         view.addSubview(activityIndicator)
+        activityIndicator.accessibilityIdentifier = "search"
         activityIndicator.constrainToCenter(of: view)
         activityIndicator.startAnimating()
         
@@ -80,6 +82,7 @@ final class MainViewController: UIViewController {
         let activityIndicator = UIActivityIndicatorView(style: .medium)
         activityIndicator.startAnimating()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 60)
+        activityIndicator.accessibilityIdentifier = "nextPage"
         tableView.tableFooterView = activityIndicator
         
         isLoadingNextPage = true

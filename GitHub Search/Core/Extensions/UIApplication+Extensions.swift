@@ -35,4 +35,8 @@ extension UIApplication {
         }
     }
     
+    static var isUITesting: Bool {
+        CommandLine.arguments.contains("-uitest")
+    }
+    
 }

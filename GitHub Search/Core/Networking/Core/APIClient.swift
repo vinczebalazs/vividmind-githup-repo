@@ -2,7 +2,7 @@
 //  APIClient.swift
 //  GitHub Search
 //
-//  Created by Balazs Vincze on 2021. 08. 30..
+//  Created by Balazs Vincze on 2021. 09. 08..
 //
 
 import Foundation

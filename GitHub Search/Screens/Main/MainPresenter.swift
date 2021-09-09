@@ -7,7 +7,7 @@
 
 import PromiseKit
 
-final class MainPresenter {
+final class MainPresenter: MainPresenterType {
     
     // MARK: Public Properties
     
@@ -16,12 +16,11 @@ final class MainPresenter {
     var hasNextPage: Bool {
         nextPageURL != nil
     }
+    var onSearchFinished: ((Swift.Result<Void, Error>) -> ())?
+    var onLoadNextPageFinished: ((Swift.Result<Void, Error>) -> ())?
             
     // MARK: Public Methods
     
-    var onSearchFinished: ((Swift.Result<Void, Error>) -> ())?
-    var onLoadNextPageFinished: ((Swift.Result<Void, Error>) -> ())?
-
     func searchRepositories(query: String) {
         APIClient.shared.execute(SearchRepositoriesRequest(query: query)).done { [self] in
             repositories = $0.items

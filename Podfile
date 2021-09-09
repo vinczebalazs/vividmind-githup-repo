@@ -8,6 +8,7 @@ target 'GitHub Search' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'PromiseKit', '~> 6.8'
+  pod 'Resolver'
 
   target 'GitHub SearchTests' do
     inherit! :search_paths
@@ -19,7 +20,8 @@ target 'GitHub Search' do
   end
 
   target 'GitHub SearchUITests' do
-    # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
 end
