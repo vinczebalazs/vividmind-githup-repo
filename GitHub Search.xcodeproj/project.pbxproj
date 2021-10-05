@@ -238,8 +238,12 @@
 		B650C38626DD213300795627 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B650C3A426DD294A00795627 /* APIClient.swift */,
+				B650C3A226DD28EB00795627 /* APIErrorHandler.swift */,
+				B650C38726DD214C00795627 /* APIRequest.swift */,
+				B650C3A626DD2B9C00795627 /* HTTPMethod.swift */,
+				B67C7F3C26E8F6E000FAB498 /* ResponseParser.swift */,
 				B650C3AB26DD302900795627 /* Errors */,
-				B67C7F2F26E8DC7200FAB498 /* Core */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -314,18 +318,6 @@
 				B67C7F5C26E94F1C00FAB498 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B67C7F2F26E8DC7200FAB498 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				B650C3A426DD294A00795627 /* APIClient.swift */,
-				B650C3A226DD28EB00795627 /* APIErrorHandler.swift */,
-				B650C38726DD214C00795627 /* APIRequest.swift */,
-				B650C3A626DD2B9C00795627 /* HTTPMethod.swift */,
-				B67C7F3C26E8F6E000FAB498 /* ResponseParser.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		B67C7F3026E8DC7700FAB498 /* Requests */ = {
