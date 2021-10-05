@@ -197,9 +197,9 @@
 		B650C36A26DD20D400795627 /* GitHub SearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				B67C7F4C26E90E2300FAB498 /* Screens */,
 				B650C36D26DD20D400795627 /* Info.plist */,
 				B67C7F4626E8FD2600FAB498 /* Core */,
+				B67C7F4C26E90E2300FAB498 /* Screens */,
 			);
 			path = "GitHub SearchTests";
 			sourceTree = "<group>";

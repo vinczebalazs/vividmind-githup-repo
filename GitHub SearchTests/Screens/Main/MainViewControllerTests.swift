@@ -27,7 +27,7 @@ final class MainViewControllerTests: QuickSpec {
             let vc = MainViewController(presenter: presenter)
 
             presenter.onSearchFinished = { _ in
-                assertSnapshot(matching: vc, as: .recursiveDescription(on: .iPhoneX))
+                assertSnapshot(matching: vc, as: .recursiveDescription)
                 exp.fulfill()
             }
 
