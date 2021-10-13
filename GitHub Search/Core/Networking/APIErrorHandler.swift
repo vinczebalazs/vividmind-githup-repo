@@ -14,11 +14,10 @@ final class APIErrorHandler {
     
     static func handle<T: APIRequest>(_ error: Error, request: T) throws {
         if isNoConnectionError(error) {
-            print("No connection!")
             showAlert("No connection")
             throw error
         }
-                
+        
         if case let APIClient.Error.httpError(url: _, errorCode: code, body: _) = error {
             switch code {
             case 403:
@@ -28,9 +27,6 @@ final class APIErrorHandler {
                 break
             }
         }
-        
-        // Here we could switch over the error and decide if we want to handle it globally here,
-        // or pass it on to the original caller (in this case we only do handle no connection errors globally).
         
         log(error, request: request)
         
