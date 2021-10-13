@@ -7,9 +7,10 @@
 
 @testable import GitHub_Search
 import Quick
-import SnapshotTesting
+import Nimble
 import OHHTTPStubs
 import PromiseKit
+import Foundation
 
 // swiftlint:disable function_body_length
 final class MainViewControllerTests: QuickSpec {
@@ -25,9 +26,12 @@ final class MainViewControllerTests: QuickSpec {
             let presenter = MainPresenter()
             let exp = QuickSpec.current.expectation(description: "Search finished.")
             let vc = MainViewController(presenter: presenter)
+            vc.beginAppearanceTransition(true, animated: false)
+            vc.endAppearanceTransition()
+            
 
-            presenter.onSearchFinished = { _ in
-                assertSnapshot(matching: vc, as: .recursiveDescription)
+            presenter.onSearchFinished = {
+                vc.searchFinished($0)
                 exp.fulfill()
             }
 
@@ -38,6 +42,17 @@ final class MainViewControllerTests: QuickSpec {
 
             presenter.searchRepositories(query: "")
             QuickSpec.current.waitForExpectations(timeout: 2)
+            
+            expect(vc.title) == "GitHub Search"
+            
+            expect(vc.tableView.dataSource!.tableView(vc.tableView, numberOfRowsInSection: 0)) == 14
+            
+            let firstCell = vc.tableView.dataSource!.tableView(vc.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+                as! MainTableViewCell
+            expect(firstCell.nameLabel.text) == "SCLAlertView-Swift"
+            expect(firstCell.ownerLabel.text) == "vikmeup"
+            expect(firstCell.starCountLabel.text) == "5158"
+            expect(firstCell.descriptionLabel.text) == "Beautiful animated Alert View. Written in Swift"
         }
     }
 

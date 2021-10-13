@@ -12,11 +12,11 @@ final class MainTableViewCell: UITableViewCell {
     
     // MARK: IBOutlets
     
-    @IBOutlet private weak var avatarImageView: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var ownerLabel: UILabel!
-    @IBOutlet private weak var starCountLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ownerLabel: UILabel!
+    @IBOutlet weak var starCountLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: Public Properties
     

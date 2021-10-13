@@ -10,11 +10,9 @@ import Resolver
 
 final class MainViewController: UIViewController {
     
-    // MARK: Private Properties
+    // MARK: Public Properties
     
-    private var presenter: MainPresenterType
-    private let cellID = "RepositoryCell"
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
@@ -23,6 +21,12 @@ final class MainViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         return tableView
     }()
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    
+    // MARK: Private Properties
+    
+    private var presenter: MainPresenterType
+    private let cellID = "RepositoryCell"
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
@@ -34,7 +38,6 @@ final class MainViewController: UIViewController {
         return searchController
     }()
     private var isLoadingNextPage = false
-    private let activityIndicator = UIActivityIndicatorView(style: .large)
     
     // MARK: Initializers
     
@@ -61,6 +64,22 @@ final class MainViewController: UIViewController {
         view.addSubview(tableView)
         view.backgroundColor = .systemBackground
         tableView.constrainToEdges(of: view)
+    }
+    
+    func searchFinished(_ result: Result<Void, Error>) {
+        activityIndicator.removeFromSuperview()
+        if case .success() = result {
+            tableView.isHidden = false
+            tableView.reloadData()
+        }
+    }
+    
+    func loadNextPageFinished(_ result: Result<Void, Error>) {
+        isLoadingNextPage = false
+        tableView.tableFooterView = nil
+        if case .success() = result {
+            tableView.reloadData()
+        }
     }
         
     // MARK: Private Methods
@@ -90,20 +109,11 @@ final class MainViewController: UIViewController {
     }
     
     private func attachPresenter() {
-        presenter.onSearchFinished = { [self] result in
-            activityIndicator.removeFromSuperview()
-            if case .success() = result {
-                tableView.isHidden = false
-                tableView.reloadData()
-            }
+        presenter.onSearchFinished = { [unowned self] in
+            searchFinished($0)
         }
-        
-        presenter.onLoadNextPageFinished = { [self] result in
-            isLoadingNextPage = false
-            tableView.tableFooterView = nil
-            if case .success() = result {
-                tableView.reloadData()
-            }
+        presenter.onLoadNextPageFinished = { [unowned self] in
+            loadNextPageFinished($0)
         }
     }
     
